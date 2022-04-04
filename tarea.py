@@ -10,6 +10,16 @@ def f1():
     for element in lista1:
         print(element["content"] + "\n")
 
+def f2():
+    lista_aux = []
+    most_common = list()
+    for line in tweets:
+        lista_aux.append(line["user"]["username"])
+    users_counter = collections.Counter(lista_aux)
+    most_common = users_counter.most_common(10)
+    for user in most_common:
+        print(user[0] + "\n")
+        
 if __name__ == '__main__':
     #f1()
     #f2()
