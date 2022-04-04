@@ -30,10 +30,22 @@ def f3():
     for date in most_days:
         print(date[0], "\n")
 
+def f4():
+    lista_aux = []
+    most_common = list()
+    for line in tweets:
+        frase = line["content"].split()
+        for palabra in frase:
+            if palabra[0] == "#":
+                lista_aux.append(palabra)
+    counter = collections.Counter(lista_aux)
+    most_common = counter.most_common(10)
+    for hashtag in most_common:
+        print(hashtag[0] + "\n")
+
 if __name__ == '__main__':
     #f1()
     #f2()
     #f3()
     #f4()
-    
     pass
