@@ -20,6 +20,16 @@ def f2():
     for user in most_common:
         print(user[0] + "\n")
         
+def f3():
+    lista_aux = []
+    most_days = list()
+    for line in tweets:
+        lista_aux.append(line["date"][0:10])
+    counter = collections.Counter(lista_aux)
+    most_days = counter.most_common(10)
+    for date in most_days:
+        print(date[0], "\n")
+
 if __name__ == '__main__':
     #f1()
     #f2()
