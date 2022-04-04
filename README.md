@@ -1,3 +1,1 @@
 # EVDiagnostica
-farmers-protest-tweets-2021-03-5.json
-.pdf
